@@ -511,18 +511,21 @@ const createProperty = (
 };
 
 export const generator = (
-  filePaths: string[],
+  rootFilePaths: string[],
   targetPath: string,
   tsConfigPath: string
 ) => {
   console.log("start");
+
+  fs.ensureDirSync(path.dirname(targetPath));
+
   console.log("> compiling");
 
   const { config } = ts.parseConfigFileTextToJson(
     tsConfigPath,
     fs.readFileSync(tsConfigPath).toString()
   );
-  const program = ts.createProgram(filePaths, config);
+  const program = ts.createProgram(rootFilePaths, config);
   const checker = program.getTypeChecker();
 
   const modelFiles = program
@@ -536,9 +539,9 @@ export const generator = (
   // console.log(
   //   program
   //     .getSourceFiles()
-  //     .filter(sourceFile => !sourceFile.fileName.endsWith('.d.ts'))
+  //     .filter(sourceFile => !sourceFile.fileName.endsWith(".d.ts"))
   //     .map(sourceFile => sourceFile.fileName)
-  //     .join(', ')
+  //     .join(", ")
   // );
 
   console.log("> compiled");

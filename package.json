@@ -7,6 +7,11 @@
   "author": "Derk Nolte <derk.nolte@sanoma.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "generator.ts",
+    "index.ts",
+    "tsconfig.json"
+  ],
   "peerDependencies": {
     "realm": ">= 3.6",
     "typescript": ">= 3.7"
