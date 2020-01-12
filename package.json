@@ -1,6 +1,6 @@
 {
   "name": "realm-ts-schema-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate realm  js schema from typescript interfaces",
   "main": "index.js",
   "repository": "git@github.com:dpnolte/realm-schema-generator.git",
