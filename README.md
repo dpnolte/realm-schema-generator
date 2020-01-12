@@ -6,6 +6,10 @@ yarn add -D realm-ts-schema-generator typescript ts-node
 yarn add realm
 ```
 
+## checkout example and run it
+See example folder.
+Clone this repo and run 'yarn example'
+
 # prepare interface
 have at least one interface with doc tag @realm.
 For example in src/store/models.ts:
