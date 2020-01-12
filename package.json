@@ -1,28 +1,34 @@
 {
   "name": "realm-ts-schema-generator",
-  "version": "0.0.3",
-  "description": "Generate realm  js schema from typescript interfaces",
-  "main": "index.ts",
+  "version": "0.0.10",
+  "description": "Generate realm js schema from typescript interfaces",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:dpnolte/realm-schema-generator.git",
   "author": "Derk Nolte <derk.nolte@sanoma.com>",
   "license": "MIT",
   "private": false,
-  "files": [
-    "generator.ts",
-    "index.ts",
-    "tsconfig.json"
-  ],
   "scripts": {
-    "example": "yarn ts-node -T example/script.ts"
+    "build": "babel --extensions .ts,.tsx src --out-dir dist --ignore '**/__tests__/**' --source-maps --delete-dir-on-start",
+    "declarations": "tsc --emitDeclarationOnly",
+    "example": "yarn ts-node -T example/script.ts",
+    "prepublishOnly": "yarn build && yarn declarations"
   },
   "peerDependencies": {
     "realm": ">= 3.6",
     "typescript": ">= 3.7"
   },
   "dependencies": {
+    "@babel/cli": "^7.8.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.0",
+    "@babel/preset-env": "^7.8.0",
+    "@babel/preset-typescript": "^7.8.0",
     "fs-extra": "^8.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.0",
     "@types/fs-extra": "^8.0.1",
     "@types/node": "^13.1.6",
     "realm": "4.0.0-beta.0",

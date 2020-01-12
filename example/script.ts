@@ -1,5 +1,5 @@
 import path from "path";
-import { generator } from "../";
+import { generator } from "../src";
 
 generator(
   [path.join(__dirname, "models.ts")],
