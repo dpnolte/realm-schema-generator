@@ -1,12 +1,12 @@
 {
   "name": "realm-ts-schema-generator",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Generate realm js schema from typescript interfaces",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:dpnolte/realm-schema-generator.git",
-  "author": "Derk Nolte <derk.nolte@sanoma.com>",
+  "author": "Derk Nolte <dpnolte@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
