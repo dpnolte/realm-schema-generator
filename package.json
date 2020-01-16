@@ -1,6 +1,6 @@
 {
   "name": "realm-ts-schema-generator",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Generate realm js schema from typescript interfaces",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -20,15 +20,15 @@
     "typescript": ">= 3.7"
   },
   "dependencies": {
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
     "@babel/cli": "^7.8.0",
+    "@babel/core": "^7.8.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.0",
     "@babel/plugin-proposal-optional-chaining": "^7.8.0",
     "@babel/preset-env": "^7.8.0",
     "@babel/preset-typescript": "^7.8.0",
-    "fs-extra": "^8.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.0",
     "@types/fs-extra": "^8.0.1",
     "@types/node": "^13.1.6",
     "realm": "4.0.0-beta.0",
